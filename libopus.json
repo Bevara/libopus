@@ -1,0 +1,17 @@
+{
+    "name": "libopus",
+    "description": "Opus audio decoder",
+    "filters":["opusdec"],
+    "help": "This filter decodes Opus audio using libopus. Use together with the oggdmx filter to demultiplex Ogg Opus files.",
+    "support": [
+        "audio"
+    ],
+    "sources":"https://bevara.ddns.net/sources/libopus.accessor",
+    "filter_source":{
+        "opusdec" : "dec_opus.c"
+    },
+    "extension":{
+      "opus" : "audio"
+    },
+    "licence_required":false
+}
