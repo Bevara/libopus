@@ -175,7 +175,7 @@ GF_FilterRegister OpusDecoderRegister = {
 	.process = opusdec_process,
 };
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_opusdec_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE opusdec_register(GF_FilterSession *session)
 {
 	return &OpusDecoderRegister;
 }
@@ -183,5 +183,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_opusdec_register(GF_Filte
 #include "filter_register.h"
 __attribute__((constructor))
 void register_opusdec(void) {
-    gf_filter_auto_register("opusdec", dynCall_opusdec_register);
+    gf_filter_auto_register("opusdec", opusdec_register);
 }
